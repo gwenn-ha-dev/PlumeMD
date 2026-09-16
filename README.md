@@ -1,57 +1,49 @@
-# MDma
+# PlumeMD
 
-A lightweight, native macOS Markdown editor and viewer built with SwiftUI.
+[![CI](https://github.com/gwenn-ha-dev/PlumeMD/actions/workflows/ci.yml/badge.svg)](https://github.com/gwenn-ha-dev/PlumeMD/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+![Platform](https://img.shields.io/badge/Platform-macOS%2014%2B-black?logo=apple)
+![Swift 6](https://img.shields.io/badge/Swift-6-orange?logo=swift)
+
+*🇬🇧 English · 🇫🇷 [Français](./README.fr.md)*
+
+A native macOS Markdown document editor with live rendering and PDF export. A document-based app: your files stay yours, on disk, in Markdown.
 
 ## Features
 
-- **Live preview** — Toggle between a rich Markdown preview and a monospaced editor with a single shortcut
-- **PDF export** — Export any document to PDF in one click
-- **Native macOS experience** — Unified toolbar, document-based architecture, dark mode support
-- **Full Markdown support** — Headings, bold, italic, strikethrough, links, code blocks with language labels, blockquotes, ordered and unordered lists, horizontal rules, inline code, and more
+- **Document-based** (`DocumentGroup`) — open, edit and save plain `.md` files.
+- **Live rendering** with a typographic design system (`DesignTokens`).
+- **PDF export** with proper pagination.
+- No lock-in: what you save is the Markdown you wrote.
 
-## Keyboard Shortcuts
+## Install
 
-| Shortcut | Action |
-|----------|--------|
-| `Shift + Cmd + P` | Toggle preview / editor |
-| `Shift + Cmd + E` | Export to PDF |
-
-## Requirements
-
-- macOS 26 (Tahoe) or later
-- Xcode 26+ (to build from source)
-
-## Installation
-
-### Download
-
-Grab the latest `.dmg` from the [Releases](../../releases) page, open it, and drag **MDma.app** to your Applications folder.
-
-### Build from Source
-
-```bash
-git clone https://github.com/thierrylebris/MDma.git
-cd MDma
-xcodebuild -scheme MDma -configuration Release build
+```sh
+git clone https://github.com/gwenn-ha-dev/PlumeMD.git
+cd PlumeMD
+make build
 ```
 
-Or open `MDma.xcodeproj` in Xcode and hit `Cmd + R`.
+## How it works
 
-### Create a DMG
+The name carries its format: *Plume* for writing, *MD* for Markdown.
 
-```bash
-./scripts/create-dmg.sh
-```
+## Build
 
-This builds a Release version and packages it into `MDma-1.0.dmg`.
+| Command | What it does |
+|---|---|
+| `make build` | Release build, warnings are errors |
+| `make test` | Run the test suite |
+| `make run` | Launch the app |
+| `make icon` | Regenerate `Resources/AppIcon.icns` |
+| `make package` | Produce a distributable bundle in `build/` |
+| `make lint` | Check compliance with the project charter |
+| `make help` | List every target |
 
-## Setting as Default Markdown Editor
+## Dependencies
 
-1. Right-click any `.md` file in Finder
-2. Select **Get Info** (`Cmd + I`)
-3. Under **Open with**, select **MDma**
-4. Click **Change All...**
+None — Apple frameworks only.
 
 ## License
 
-[MIT](LICENSE)
+MIT © 2026 gwenn-ha-dev — see [LICENSE](./LICENSE).

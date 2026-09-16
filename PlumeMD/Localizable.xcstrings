@@ -1,0 +1,40 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Exporter PDF": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Export PDF"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exporter PDF"
+          }
+        }
+      }
+    },
+    "Exporter en PDF (⇧⌘E)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Export to PDF (⇧⌘E)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exporter en PDF (⇧⌘E)"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

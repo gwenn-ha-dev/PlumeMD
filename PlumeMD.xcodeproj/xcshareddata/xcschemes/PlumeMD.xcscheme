@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4833D362F9B7A4B007386A1"
-               BuildableName = "MDma.app"
-               BlueprintName = "MDma"
-               ReferencedContainer = "container:MDma.xcodeproj">
+               BuildableName = "PlumeMD.app"
+               BlueprintName = "PlumeMD"
+               ReferencedContainer = "container:PlumeMD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4833D362F9B7A4B007386A1"
-            BuildableName = "MDma.app"
-            BlueprintName = "MDma"
-            ReferencedContainer = "container:MDma.xcodeproj">
+            BuildableName = "PlumeMD.app"
+            BlueprintName = "PlumeMD"
+            ReferencedContainer = "container:PlumeMD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4833D362F9B7A4B007386A1"
-            BuildableName = "MDma.app"
-            BlueprintName = "MDma"
-            ReferencedContainer = "container:MDma.xcodeproj">
+            BuildableName = "PlumeMD.app"
+            BlueprintName = "PlumeMD"
+            ReferencedContainer = "container:PlumeMD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

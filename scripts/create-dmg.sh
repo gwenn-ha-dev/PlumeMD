@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-APP_NAME="MDma"
+APP_NAME="PlumeMD"
 VERSION="1.0"
 DMG_NAME="${APP_NAME}-${VERSION}.dmg"
 BUILD_DIR="/tmp/${APP_NAME}-release"
