@@ -42,7 +42,9 @@ The name carries its format: *Plume* for writing, *MD* for Markdown.
 
 ## Dependencies
 
-None — Apple frameworks only.
+[swift-markdown](https://github.com/swiftlang/swift-markdown) (0.7.3+, Apache-2.0),
+Apple's CommonMark parser. PlumeMD renders the document tree it produces rather
+than parsing Markdown itself; everything else is Apple frameworks.
 
 ## License
 
