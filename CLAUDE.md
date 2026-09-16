@@ -23,8 +23,8 @@ the `Makefile`. It is the same interface in every project here.
   `Resources/Localizable.xcstrings`, present in both `en` and `fr`. Adding a
   string means adding both translations in the same change.
 - **No build artefacts committed.** No `.app`, no `build/`, no `.build/`.
-- **Dependencies: none.** Adding one requires documenting it in the README's
-  *Dependencies* section.
+- **Dependencies: swift-markdown.** Adding another requires documenting it in the
+  README's *Dependencies* section.
 - **`README.md` and `README.fr.md` stay in sync.** Editing one means editing the other.
 - **The icon is generated**, never hand-placed: `outils/icone.swift` is the
   source, `make icon` rebuilds `Resources/AppIcon.icns`.

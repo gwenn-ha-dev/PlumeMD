@@ -10,15 +10,31 @@
 		E4813E672F9B7D2D0018C3B4 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = E4813E662F9B7D2D0018C3B4 /* Markdown */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E4PLUMTE570000000000007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4833D2F2F9B7A4B007386A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4833D362F9B7A4B007386A1;
+			remoteInfo = PlumeMD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E4813E682F9B7DEF0018C3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4833D372F9B7A4B007386A1 /* PlumeMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumeMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4PLUMTE570000000000002 /* PlumeMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumeMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E4833D392F9B7A4B007386A1 /* PlumeMD */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PlumeMD;
+			sourceTree = "<group>";
+		};
+		E4PLUMTE570000000000003 /* PlumeMDTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PlumeMDTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +48,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4PLUMTE570000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				E4833D392F9B7A4B007386A1 /* PlumeMD */,
+				E4PLUMTE570000000000003 /* PlumeMDTests */,
 				E4833D382F9B7A4B007386A1 /* Products */,
 				E4813E682F9B7DEF0018C3B4 /* Info.plist */,
 			);
@@ -48,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				E4833D372F9B7A4B007386A1 /* PlumeMD.app */,
+				E4PLUMTE570000000000002 /* PlumeMDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +103,29 @@
 			productReference = E4833D372F9B7A4B007386A1 /* PlumeMD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E4PLUMTE570000000000001 /* PlumeMDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4PLUMTE57000000000000B /* Build configuration list for PBXNativeTarget "PlumeMDTests" */;
+			buildPhases = (
+				E4PLUMTE570000000000004 /* Sources */,
+				E4PLUMTE570000000000005 /* Frameworks */,
+				E4PLUMTE570000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4PLUMTE570000000000008 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E4PLUMTE570000000000003 /* PlumeMDTests */,
+			);
+			name = PlumeMDTests;
+			packageProductDependencies = (
+			);
+			productName = PlumeMDTests;
+			productReference = E4PLUMTE570000000000002 /* PlumeMDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -90,6 +138,9 @@
 				TargetAttributes = {
 					E4833D362F9B7A4B007386A1 = {
 						CreatedOnToolsVersion = 26.4.1;
+					};
+					E4PLUMTE570000000000001 = {
+						TestTargetID = E4833D362F9B7A4B007386A1;
 					};
 				};
 			};
@@ -111,12 +162,20 @@
 			projectRoot = "";
 			targets = (
 				E4833D362F9B7A4B007386A1 /* PlumeMD */,
+				E4PLUMTE570000000000001 /* PlumeMDTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E4833D352F9B7A4B007386A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4PLUMTE570000000000006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +192,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4PLUMTE570000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4PLUMTE570000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4833D362F9B7A4B007386A1 /* PlumeMD */;
+			targetProxy = E4PLUMTE570000000000007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E4833D402F9B7A4C007386A1 /* Debug */ = {
@@ -328,6 +402,38 @@
 			};
 			name = Release;
 		};
+		E4PLUMTE570000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJAB4C2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.PlumeMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumeMD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlumeMD";
+			};
+			name = Debug;
+		};
+		E4PLUMTE57000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJAB4C2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.PlumeMDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumeMD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlumeMD";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +451,15 @@
 			buildConfigurations = (
 				E4833D432F9B7A4C007386A1 /* Debug */,
 				E4833D442F9B7A4C007386A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4PLUMTE57000000000000B /* Build configuration list for PBXNativeTarget "PlumeMDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4PLUMTE570000000000009 /* Debug */,
+				E4PLUMTE57000000000000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
