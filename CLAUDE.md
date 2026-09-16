@@ -4,7 +4,7 @@
 
 A native macOS Markdown document editor with live rendering and PDF export. A document-based app: your files stay yours, on disk, in Markdown.
 
-Platform: macOS 14+. Build system: Xcode project. Bundle ID `dev.gwennha.PlumeMD`.
+Platform: macOS 26.4+. Build system: Xcode project. Bundle ID `dev.gwennha.PlumeMD`.
 
 ## Build and test
 
