@@ -7,24 +7,43 @@
 
 *🇬🇧 [English](./README.md) · 🇫🇷 Français*
 
-Éditeur de documents Markdown natif macOS, avec rendu live et export PDF. App orientée document : vos fichiers restent les vôtres, sur disque, en Markdown.
+Éditeur Markdown natif macOS, avec une vue rendue et un export PDF paginé. App orientée document : vos fichiers restent les vôtres, sur disque, en Markdown.
+
+![PlumeMD affichant, en rendu, les notes d'une randonnée côtière de quatre jours : un grand titre, un paragraphe avec des mots en italique et en gras, la liste numérotée des quatre étapes avec leurs distances, une citation dans un bloc teinté à barre bleue, et la liste à puces de ce qu'il y a dans le sac](docs/img/preview.fr.png)
 
 ## Fonctionnalités
 
-- **Orienté document** (`DocumentGroup`) — ouvre, édite et enregistre de simples fichiers `.md`.
-- **Rendu live** avec un système typographique (`DesignTokens`).
-- **Export PDF** avec pagination correcte.
-- Aucun enfermement : ce que vous enregistrez est le Markdown que vous avez écrit.
+- **De simples fichiers Markdown.** PlumeMD ouvre, édite et enregistre les fichiers `.md`, `.markdown` et `.mdown`, et le texte brut. Ce qui est enregistré est le Markdown que vous avez écrit, en UTF-8, octet pour octet.
+- **Un rendu et un éditeur**, à un clic ou <kbd>⇧⌘P</kbd> l'un de l'autre : titres, emphase, texte barré, liens, code en ligne, listes numérotées et à puces, listes imbriquées, citations, blocs de code avec leur langage, filets horizontaux.
+- **Export PDF** (<kbd>⇧⌘E</kbd>), au format de papier de vos réglages d'impression, A4 ou US Letter. Les sauts de page tombent entre les blocs, jamais au milieu d'une ligne, et un titre ne reste pas seul en bas de page.
+- **Mode clair et mode sombre**, selon le système.
+- Anglais et français, selon la langue du système.
+
+| L'éditeur | Mode sombre |
+|---|---|
+| ![Les mêmes notes de randonnée dans l'éditeur : le Markdown brut en police à chasse fixe, avec ses titres en #, ses lignes numérotées, sa citation en > et ses marques ** de gras](docs/img/editor.fr.png) | ![Notes de conception d'un petit cache HTTP en mode sombre : un titre, un sous-titre en italique, une liste à puces de règles de cache avec du code en ligne, et un bloc de code Swift étiqueté swift](docs/img/dark.fr.png) |
 
 ## Installation
+
+Téléchargez **`PlumeMD-<version>.dmg`** depuis la [dernière release](https://github.com/gwenn-ha-dev/PlumeMD/releases/latest), ouvrez-le et glissez PlumeMD sur Applications. L'app est signée avec un Developer ID et notarisée par Apple : elle s'ouvre d'un double clic. Elle demande macOS 26.4 ou plus récent.
+
+Pour la construire depuis les sources :
 
 ```sh
 git clone https://github.com/gwenn-ha-dev/PlumeMD.git
 cd PlumeMD
-make build
+make package      # build/PlumeMD.app
 ```
 
+## Utilisation
+
+Ouvrez un fichier Markdown avec PlumeMD, ou créez-en un par *Fichier → Nouveau*. Un document s'ouvre sur son rendu ; le bouton crayon, ou <kbd>⇧⌘P</kbd>, bascule vers l'éditeur et retour. *Exporter PDF* dans la barre d'outils, ou <kbd>⇧⌘E</kbd>, écrit le document rendu dans un PDF.
+
 ## Comment ça marche
+
+[swift-markdown](https://github.com/swiftlang/swift-markdown) analyse le texte en arbre de document ; PlumeMD dessine cet arbre avec SwiftUI, bloc par bloc, avec sa propre échelle typographique (`DesignTokens`). L'export PDF rend les mêmes blocs un à un et en remplit les pages.
+
+Pas encore rendus : les tableaux et les images s'affichent comme leur texte source, et les blocs de code ne sont pas colorés.
 
 Le nom porte son format : *Plume* pour l'écriture, *MD* pour Markdown.
 
@@ -36,7 +55,11 @@ Le nom porte son format : *Plume* pour l'écriture, *MD* pour Markdown.
 | `make test` | Lance la suite de tests |
 | `make run` | Lance l'app |
 | `make icon` | Régénère `Resources/AppIcon.icns` |
-| `make package` | Produit un bundle distribuable dans `build/` |
+| `make package` | Construit `build/PlumeMD.app` |
+| `make sign` | La signe avec un Developer ID, la notarise et l'agrafe |
+| `make dmg` | Emballe l'app notarisée dans un `.dmg` notarisé |
+| `make shots` | Refait les captures de `docs/img/` |
+| `make release-check` | Vérifie que `build/` est publiable |
 | `make lint` | Vérifie la conformité à la charte |
 | `make help` | Liste toutes les cibles |
 

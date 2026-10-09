@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlumeMD — a native Markdown editor for the Mac</title>
+<meta name="description" content="Free, open-source Markdown editor for macOS: plain .md files on disk, a rendered view one keystroke away, and PDF export on A4 or US Letter pages. Native SwiftUI, signed and notarized.">
+<link rel="canonical" href="https://gwenn-ha-dev.github.io/PlumeMD/">
+<link rel="icon" href="images/icon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PlumeMD — a native Markdown editor for the Mac">
+<meta property="og:description" content="Free, open-source Markdown editor for macOS: plain .md files on disk, a rendered view one keystroke away, and PDF export on A4 or US Letter pages. Native SwiftUI, signed and notarized.">
+<meta property="og:url" content="https://gwenn-ha-dev.github.io/PlumeMD/">
+<meta property="og:image" content="https://gwenn-ha-dev.github.io/PlumeMD/images/social-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gwenn-ha-dev.github.io/PlumeMD/images/social-preview.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PlumeMD",
+ "operatingSystem":"macOS 26.4 or later","applicationCategory":"ProductivityApplication",
+ "description":"Free, open-source Markdown editor for macOS: plain .md files on disk, a rendered view one keystroke away, and PDF export on A4 or US Letter pages. Native SwiftUI, signed and notarized.",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT",
+ "downloadUrl":"https://github.com/gwenn-ha-dev/PlumeMD/releases/latest",
+ "codeRepository":"https://github.com/gwenn-ha-dev/PlumeMD","image":"https://gwenn-ha-dev.github.io/PlumeMD/images/preview.png"}
+</script>
+<style>
+  :root {
+    --bg: #ffffff; --panel: #f4f5f7; --line: #e2e4e8; --text: #16181d; --muted: #5d6170;
+    --accent: #2f7d5b; --accent-text: #fff; --link: #1f5fbf;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111214; --panel: #1b1c1f; --line: #2c2d31; --text: #ececee; --muted: #a2a3a8; --link: #8ab4ff; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; }
+  a { color: var(--link); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 72px 0 40px; text-align: center; }
+  .icon { width: 96px; height: 96px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); margin: 12px 0 4px; letter-spacing: -0.02em; }
+  .lead { font-size: clamp(19px, 2.6vw, 23px); max-width: 760px; margin: 0 auto 28px; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; text-decoration: none;
+         font-weight: 600; border: 1px solid var(--line); color: var(--text); background: var(--panel); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .req { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  figure { margin: 0; }
+  .shot img, .hero img { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 12px; }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; text-align: center; }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 20px; letter-spacing: -0.01em; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+  .split.rev .text { order: 2; }
+  @media (max-width: 760px) { .split { grid-template-columns: 1fr; } .split.rev .text { order: 0; } }
+  code { font: 14.5px ui-monospace, "SF Mono", Menlo, monospace; background: var(--panel);
+         padding: 2px 6px; border-radius: 6px; border: 1px solid var(--line); }
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; text-align: center;
+           border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img class="icon" src="images/icon.png" width="96" height="96" alt="">
+  <h1>PlumeMD</h1>
+  <p class="lead">Write in Markdown, read it rendered, export it to PDF. Your documents stay plain <code>.md</code> files on your disk — what you save is what you wrote.</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/gwenn-ha-dev/PlumeMD/releases/latest">Download for macOS</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/PlumeMD">Source on GitHub</a>
+  </div>
+  <p class="req">Free and open source (MIT) · macOS 26.4 or later · signed and notarized · English and French</p>
+</header>
+
+<div class="wrap hero">
+  <figure>
+    <img src="images/preview.png" alt="PlumeMD showing the rendered notes of a coastal walk: a title, a paragraph with italic and bold words, a numbered list of four stages, a quotation in a tinted block">
+    <figcaption>The rendered view: headings, lists, quotations and links, set in the system’s own type.</figcaption>
+  </figure>
+</div>
+
+<section class="wrap" style="margin-top:48px">
+  <h2>Why PlumeMD</h2>
+  <div class="grid3">
+    <div class="card"><h3>Plain files</h3><p>Opens and saves <code>.md</code>, <code>.markdown</code> and <code>.mdown</code> files in UTF-8, byte for byte. No library, no database, no lock-in.</p></div>
+    <div class="card"><h3>Read and write</h3><p>A rendered view and an editor, one click or ⇧⌘P apart.</p></div>
+    <div class="card"><h3>PDF on real pages</h3><p>⇧⌘E exports on the paper size of your print settings. Page breaks fall between blocks, never through a line.</p></div>
+    <div class="card"><h3>Light and dark</h3><p>Follows the system appearance, and the system language: English or French.</p></div>
+    <div class="card"><h3>Native</h3><p>SwiftUI and Apple’s swift-markdown parser. Sandboxed: it reaches only the files you open.</p></div>
+    <div class="card"><h3>Free and open</h3><p>MIT licence, source on GitHub, built with one <code>make</code> command.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split">
+    <div class="text">
+      <h2>The Markdown, as you wrote it</h2>
+      <p>⇧⌘P switches to the editor: the source in a monospaced font, nothing hidden, nothing
+        rewritten. Switch back to read it rendered.</p>
+    </div>
+    <figure class="shot"><img src="images/editor.png" alt="The same walking notes in the editor: raw Markdown with # headings, numbered lines, a > quotation and ** bold markers" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split rev">
+    <div class="text">
+      <h2>Notes with code in them</h2>
+      <p>Inline code, and code blocks labelled with their language, in Dark Mode as in light.</p>
+    </div>
+    <figure class="shot"><img src="images/dark.png" alt="Design notes for a small HTTP cache in Dark Mode: a bulleted list of rules with inline code, and a Swift code block" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="wrap" style="text-align:center">
+  <h2>Get it</h2>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/gwenn-ha-dev/PlumeMD/releases/latest">Download the .dmg</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/PlumeMD#readme">Read the README</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/PlumeMD/blob/main/README.fr.md">En français</a>
+  </div>
+  <p class="req">Open the .dmg, drag PlumeMD onto Applications. It is signed with a Developer ID and notarized by Apple: it opens with a double click.</p>
+</section>
+
+<footer class="wrap">
+  PlumeMD · MIT · <a href="https://github.com/gwenn-ha-dev/PlumeMD">github.com/gwenn-ha-dev/PlumeMD</a>
+</footer>
+</body>
+</html>
