@@ -4,7 +4,9 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @Binding var document: MarkdownDocument
-    @State private var showPreview = true
+    // `-startInEditor YES` at launch opens the editor instead of the preview:
+    // the README captures need both views, and nothing can click the button.
+    @State private var showPreview = !UserDefaults.standard.bool(forKey: "startInEditor")
 
     var body: some View {
         Group {
@@ -35,11 +37,13 @@ struct ContentView: View {
                 Button {
                     showPreview.toggle()
                 } label: {
-                    Label(showPreview ? "Éditer" : "Aperçu",
+                    // A ternary of literals is a String, which Label and help
+                    // take verbatim: each branch must be a LocalizedStringKey.
+                    Label(showPreview ? LocalizedStringKey("Éditer") : LocalizedStringKey("Aperçu"),
                           systemImage: showPreview ? "pencil" : "eye")
                 }
                 .keyboardShortcut("p", modifiers: [.command, .shift])
-                .help(showPreview ? "Basculer vers l'éditeur (⇧⌘P)" : "Basculer vers l'aperçu (⇧⌘P)")
+                .help(showPreview ? Text("Basculer vers l'éditeur (⇧⌘P)") : Text("Basculer vers l'aperçu (⇧⌘P)"))
             }
             ToolbarItem(placement: .automatic) {
                 Button(action: exportPDF) {

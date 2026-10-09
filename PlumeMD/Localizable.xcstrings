@@ -1,6 +1,57 @@
 {
   "sourceLanguage": "fr",
   "strings": {
+    "Aperçu": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aperçu"
+          }
+        }
+      }
+    },
+    "Basculer vers l'aperçu (⇧⌘P)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch to the preview (⇧⌘P)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basculer vers l'aperçu (⇧⌘P)"
+          }
+        }
+      }
+    },
+    "Basculer vers l'éditeur (⇧⌘P)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch to the editor (⇧⌘P)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basculer vers l'éditeur (⇧⌘P)"
+          }
+        }
+      }
+    },
     "Exporter PDF": {
       "extractionState": "manual",
       "localizations": {
@@ -31,6 +82,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Exporter en PDF (⇧⌘E)"
+          }
+        }
+      }
+    },
+    "Éditer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éditer"
           }
         }
       }

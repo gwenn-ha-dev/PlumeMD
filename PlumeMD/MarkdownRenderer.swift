@@ -15,7 +15,7 @@ struct MarkdownView: View {
     }
 }
 
-private struct BlockView: View {
+struct BlockView: View {
     let block: BlockMarkup
 
     var body: some View {
@@ -68,8 +68,10 @@ private struct BlockView: View {
                     .padding(.vertical, (code.language != nil && !code.language!.isEmpty) ? 10 : 14)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .background(MarkdownColors.codeBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            // Background in a shape rather than background + clipShape: the
+            // clipped layer made ImageRenderer draw a wrapped code line in
+            // white in the exported PDF, invisible on paper.
+            .background(MarkdownColors.codeBackground, in: RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .strokeBorder(MarkdownColors.codeBorder, lineWidth: 0.5)
