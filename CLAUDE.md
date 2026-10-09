@@ -60,8 +60,6 @@ the `Makefile`. It is the same interface in every project here.
   `-startInEditor YES` at launch opens the editor instead of the rendered view.
   On a Mac in Dark Mode, `-AppleInterfaceStyle Light` does not give a light
   window; `-NSRequiresAquaSystemAppearance YES` does.
-- `scripts/create-dmg.sh` predates all this: it builds an unsigned dmg of
-  version 1.0 at the repository root. Use `make dmg`.
 
 ## Layout
 
@@ -81,7 +79,6 @@ Resources/
 docs/img/          # README captures, social preview
 icon.jpg
 outils/            # icone.swift, captures.sh, exemples/
-scripts/
 site/              # GitHub Pages
 ```
 
